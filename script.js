@@ -4,6 +4,7 @@
 const currentDate = new Date();
 
 // Get the month, day, and year.
+// JavaScript months begin at 0, so 1 is added to the month.
 const month = String(currentDate.getMonth() + 1).padStart(2, "0");
 const day = String(currentDate.getDate()).padStart(2, "0");
 const year = currentDate.getFullYear();
@@ -39,8 +40,9 @@ const secondIsInteger = Number.isInteger(secondNumber);
 const thirdIsInteger = Number.isInteger(thirdNumber);
 const fourthIsInteger = Number.isInteger(fourthNumber);
 
-// Use if/else statements to create messages for two of the values.
+// Use if/else statements to create messages.
 let thirdMessage;
+
 if (thirdIsNaN) {
   thirdMessage = "This value is not a valid number.";
 } else {
@@ -48,22 +50,50 @@ if (thirdIsNaN) {
 }
 
 let secondMessage;
+
 if (secondIsInteger) {
   secondMessage = "This value is an integer.";
 } else {
   secondMessage = "This value is not an integer because it contains a decimal.";
 }
 
-// Display all conversion and validation results on the webpage.
+// Display all conversion results on the webpage.
 document.getElementById("numberConversionOutput").innerHTML = `
-  <p>Original: "${firstValue}" &rarr; Converted: ${firstNumber} &rarr; isNaN: ${firstIsNaN} &rarr; isInteger: ${firstIsInteger}</p>
-  <p>Original: "${secondValue}" &rarr; Converted: ${secondNumber} &rarr; isNaN: ${secondIsNaN} &rarr; isInteger: ${secondIsInteger}<br>${secondMessage}</p>
-  <p>Original: "${thirdValue}" &rarr; Converted: ${thirdNumber} &rarr; isNaN: ${thirdIsNaN} &rarr; isInteger: ${thirdIsInteger}<br>${thirdMessage}</p>
-  <p>Original: "${fourthValue}" &rarr; Converted: ${fourthNumber} &rarr; isNaN: ${fourthIsNaN} &rarr; isInteger: ${fourthIsInteger}</p>';
+  <p>
+    Original: "${firstValue}" &rarr;
+    Converted: ${firstNumber} &rarr;
+    isNaN: ${firstIsNaN} &rarr;
+    isInteger: ${firstIsInteger}
+  </p>
+
+  <p>
+    Original: "${secondValue}" &rarr;
+    Converted: ${secondNumber} &rarr;
+    isNaN: ${secondIsNaN} &rarr;
+    isInteger: ${secondIsInteger}<br>
+    ${secondMessage}
+  </p>
+
+  <p>
+    Original: "${thirdValue}" &rarr;
+    Converted: ${thirdNumber} &rarr;
+    isNaN: ${thirdIsNaN} &rarr;
+    isInteger: ${thirdIsInteger}<br>
+    ${thirdMessage}
+  </p>
+
+  <p>
+    Original: "${fourthValue}" &rarr;
+    Converted: ${fourthNumber} &rarr;
+    isNaN: ${fourthIsNaN} &rarr;
+    isInteger: ${fourthIsInteger}
+  </p>
+`;
+
 
 // Part 3: Math and Number Formatting
 
-// Create numeric values for a simple price calculator.
+// Create numeric values for a price calculator.
 const itemPrice = 24.99;
 const taxRate = 0.0725;
 const shippingCost = 5.99;
