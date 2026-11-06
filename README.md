@@ -1,2 +1,4 @@
 # CIT384-HW9
 The easiest part was displaying the math results because the calculations were pretty simple. The hardest part was getting the date formatted correctly with two digits for the month and day. I learned that the Date object can get the current month, day, and year, but the month starts at 0. I also learned that the Number object can convert strings into numbers and check if they are valid or integers. Finally, I learned that JavaScript can display results directly on the webpage by changing the HTML with element IDs.
+
+https://jwade228.github.io/CIT384-HW9/
