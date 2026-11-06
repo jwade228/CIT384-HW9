@@ -59,4 +59,25 @@ document.getElementById("numberConversionOutput").innerHTML = `
   <p>Original: "${firstValue}" &rarr; Converted: ${firstNumber} &rarr; isNaN: ${firstIsNaN} &rarr; isInteger: ${firstIsInteger}</p>
   <p>Original: "${secondValue}" &rarr; Converted: ${secondNumber} &rarr; isNaN: ${secondIsNaN} &rarr; isInteger: ${secondIsInteger}<br>${secondMessage}</p>
   <p>Original: "${thirdValue}" &rarr; Converted: ${thirdNumber} &rarr; isNaN: ${thirdIsNaN} &rarr; isInteger: ${thirdIsInteger}<br>${thirdMessage}</p>
-  <p>Original: "${fourthValue}" &rarr; Converted: ${fourthNumber} &rarr; isNaN: ${fourthIsNaN} &rarr; isInteger: ${fourthIsInteger}</p>
+  <p>Original: "${fourthValue}" &rarr; Converted: ${fourthNumber} &rarr; isNaN: ${fourthIsNaN} &rarr; isInteger: ${fourthIsInteger}</p>';
+
+// Part 3: Math and Number Formatting
+
+// Create numeric values for a simple price calculator.
+const itemPrice = 24.99;
+const taxRate = 0.0725;
+const shippingCost = 5.99;
+
+// Perform addition and multiplication calculations.
+const subtotal = itemPrice + shippingCost;
+const taxAmount = subtotal * taxRate;
+const totalCost = subtotal + taxAmount;
+
+// Use toFixed(2) to display money with two decimal places.
+document.getElementById("mathOutput").innerHTML = `
+  <p>Item price: $${itemPrice.toFixed(2)}</p>
+  <p>Shipping cost: $${shippingCost.toFixed(2)}</p>
+  <p>Subtotal: $${subtotal.toFixed(2)}</p>
+  <p>Tax amount: $${taxAmount.toFixed(2)}</p>
+  <p><strong>Total cost: $${totalCost.toFixed(2)}</strong></p>
+`;
