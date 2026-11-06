@@ -1,0 +1,59 @@
+/* Basic page styling */
+body {
+  margin: 0;
+  padding: 30px;
+  background-color: #101820;
+  color: #f4f7f5;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  max-width: 850px;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: #63e6be;
+}
+
+h1 {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+main {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #1b2a34;
+  border: 1px solid #35515f;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+#dateOutput,
+#numberConversionOutput,
+#mathOutput {
+  padding: 14px;
+  background-color: #071b1b;
+  border-left: 4px solid #63e6be;
+  color: #b8f7df;
+}
+
+#dateOutput {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
